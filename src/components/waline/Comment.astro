@@ -113,6 +113,21 @@ const { class: className } = Astro.props
     display: inline-block;
   }
 
+  /* Waline 的订阅链接（RSS 图标 + "Subscribe to comments of this post/site"）
+     设计上是靠 max-width:16px 收起、hover 时展开的；上面那条 `#waline a` 会把
+     链接变成 block，配合 break-anywhere 把标签按字符换行，撑成一条竖排文字。
+     这里把 Waline 原本的布局还给它。 */
+  #waline :global(.wl-rss > a) {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  #waline :global(.wl-rss span) {
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+
   /* Reaction buttons */
   #waline :global(.wl-reaction-title, .wl-reaction-text) {
     display: none;
