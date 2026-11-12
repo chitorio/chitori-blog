@@ -13,7 +13,7 @@
     "pure": "astro-pure",
     "format": "prettier --write  '**/*.{js,jsx,ts,tsx,md,mdx,astro}'",
     "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx,astro}'",
-    "yijiansilian": "bun lint && bun sync && bun check && bun format",
+    "yijiansilian": "npm run lint && npm run sync && npm run check && npm run format",
     "clean": "rm -rf .astro .vercel dist",
     "cache:avatars": "tsx preset/scripts/cacheAvatars.ts"
   },

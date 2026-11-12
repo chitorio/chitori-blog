@@ -37,6 +37,10 @@ node_modules/
 old_blog
 ignore.*
 bunfig.toml
+bun.lock
+bun.lockb
+yarn.lock
+pnpm-lock.yaml
 /src/content/blog/test.*
 /test/
 .vercel
